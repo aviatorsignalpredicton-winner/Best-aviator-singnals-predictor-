@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BEST AVIATOR SIGNALS PREDICTION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;700;900&display=swap');
+        :root { --brand-green: #00ff88; }
+        body { background: #050505; color: #e2e2e2; font-family: 'Outfit', sans-serif; }
+        .glass-panel { background: rgba(20, 20, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; }
+        .glow-text { text-shadow: 0 0 15px rgba(0, 255, 136, 0.5); }
+        .status-dot { width: 8px; height: 8px; background: var(--brand-green); border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.4; } }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div id="authOverlay" class="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 backdrop-blur-md p-4">
+        <div class="glass-panel w-full max-w-sm p-8 border border-white/10 text-center">
+            <h2 class="text-3xl font-black text-[#00ff88] mb-2">ACCESS TERMINAL</h2>
+            <input type="text" id="username" placeholder="Username" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-4 text-white">
+            <input type="password" id="password" placeholder="Password" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-8 text-white">
+            <button onclick="authenticate()" class="w-full bg-[#00ff88] text-black font-black py-4 rounded-xl">LOGIN / SIGNUP</button>
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        <aside class="w-20 lg:w-64 border-r border-white/5 flex flex-col items-center py-8 gap-10 hidden md:flex sticky top-0 h-screen">
+            <div class="text-[#00ff88] text-2xl font-black italic">AV-PRO</div>
+            <nav class="flex flex-col gap-10 text-gray-500">
+                <i class="fa-solid fa-house text-[#00ff88] text-xl"></i>
+                <i class="fa-solid fa-chart-pie"></i>
+                <i class="fa-solid fa-shield-halved"></i>
+            </nav>
+            <div class="mt-auto w-full px-4 space-y-4">
+                <a href="https://t.me/+-yMnlu-g5AA5ZDJk" target="_blank" class="block bg-[#229ED9] text-white p-3 rounded-xl text-center text-xs font-bold">TELEGRAM</a>
+                <a href="https://whatsapp.com/channel/0029VbBw9Mm8vd1Gv1wwVd1r" target="_blank" class="block bg-green-500 text-white p-3 rounded-xl text-center text-xs font-bold">WHATSAPP</a>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-4 lg:p-8">
+            <header class="flex justify-between items-center mb-8">
+                <div>
+                    <h1 class="text-2xl font-black">BEST AVIATOR SIGNALS PREDICTION</h1>
+                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em]"><span class="status-dot mr-1"></span> Neural Engine Active</p>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 lg:col-span-8 glass-panel p-8 min-h-[350px] flex flex-col justify-center items-center">
+                    <div id="multiplier" class="text-8xl font-black text-white italic glow-text">1.00x</div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-4 glass-panel p-6 border border-[#00ff88]/20">
+                    <select id="platform" class="w-full bg-black/50 border border-white/10 p-3 rounded-xl mb-4 text-sm">
+                        <option>Betway</option><option>Odibets</option><option>Betika</option><option>BetPawa</option>
+                    </select>
+                    <input id="crackKey" type="text" placeholder="Enter Cracking Code" class="w-full bg-black/50 border border-white/10 p-3 rounded-xl mb-4 text-center font-mono">
+                    <button onclick="generateSignal()" id="genBtn" class="w-full bg-[#00ff88] text-black font-black py-4 rounded-xl">GET NEXT SIGNAL</button>
+                    <div id="signalDisplay" class="text-center text-5xl font-black mt-6">--x</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <a href="https://wa.me/254741216552?text=I%20need%20account%20management" class="fixed bottom-6 left-6 z-[100] bg-blue-600 text-white p-4 rounded-full shadow-lg">
+        <i class="fa-solid fa-user-gear text-xl"></i>
+    </a>
+
+    <script>
+        function authenticate() { 
+            if(document.getElementById('username').value && document.getElementById('password').value) {
+                document.getElementById('authOverlay').style.display = 'none';
+            }
+        }
+
+        function generateSignal() {
+            const key = document.getElementById('crackKey').value;
+            if(key !== "524632kk") { alert("Invalid Code! Contact on WhatsApp."); return; }
+            
+            document.getElementById('signalDisplay').innerText = (Math.random() * 8 + 1.2).toFixed(2) + "x";
+        }
+
+        // Multiplier Animation
+        let m = 1.0;
+        setInterval(() => {
+            m += Math.random() * 0.1;
+            document.getElementById('multiplier').innerText = m.toFixed(2) + "x";
+            if(m > 50) m = 1.0;
+        }, 100);
+    </script>
+</body>
+</html>
